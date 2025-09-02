@@ -7,13 +7,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fffaf0;
-  color: #333;
+  background-color: #fffaf0;  /* Color de fondo */
+  color: #333; /* Color de texto */
   overflow-x: hidden; /* Esto oculta cualquier desbordamiento horizontal */
 }
 
 header {
-  background-color: #500000;
+  background-color: #500000; /* Color de fondo del header */
   color: white;
   text-align: center;
   padding: 20px;
@@ -47,12 +47,12 @@ header img {
 
 .item h3 {
   margin: 0;
-  color: #500000;
+  color: #500000; /* Color del texto del item */
 }
 
 footer {
   text-align: center;
-  background-color: #500000;
+  background-color: #500000; /* Color de fondo del footer */
   color: white;
   padding: 15px;
   margin-top: 40px;
@@ -66,7 +66,7 @@ footer {
 }
 
 .menu-buttons button {
-  background-color: #8B0000; /* vino oscuro */
+  background-color: #8B0000; /* Vino oscuro para los botones */
   color: white;
   border: none;
   padding: 12px 24px;
@@ -78,28 +78,28 @@ footer {
 }
 
 .menu-buttons button:hover {
-  background-color: #a51414;
+  background-color: #a51414; /* Color cuando el botón es hover */
   transform: scale(1.05);
 }
 
 .menu-buttons button:active {
-  transform: scale(0.95);
+  transform: scale(0.95); /* Efecto cuando se hace click */
 }
 
 .item {
-  cursor: pointer;             /* manita en desktop */
-  transition: all 0.3s ease;   /* animación suave */
+  cursor: pointer;             /* Manita en desktop */
+  transition: all 0.3s ease;   /* Animación suave */
   padding: 12px;
   border-radius: 8px;
 }
 
 .item:hover {
-  background-color: rgba(0,0,0,0.1); /* resalta */
-  transform: scale(1.02);            /* leve zoom */
+  background-color: rgba(0,0,0,0.1); /* Resalta al pasar el mouse */
+  transform: scale(1.02);            /* Leve zoom */
 }
 
 .item:active {
-  background-color: rgba(0,0,0,0.2); /* al presionar en móvil */
+  background-color: rgba(0,0,0,0.2); /* Al presionar en móvil */
   transform: scale(0.98);
 }
 
@@ -118,8 +118,8 @@ footer {
 
 /* Contenido del modal */
 .modal-content {
-  background-color: #fffaf0;
-  margin: 10% auto;  /* centra vertical y horizontal */
+  background-color: #fffaf0; /* Color de fondo del modal */
+  margin: 10% auto;  /* Centra vertical y horizontal */
   padding: 20px;
   border-radius: 12px;
   width: 80%;

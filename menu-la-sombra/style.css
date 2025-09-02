@@ -1,10 +1,15 @@
 /* Estilos generales */
+* {
+  box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #fffaf0;
-  margin: 0;
-  padding: 0;
   color: #333;
+  overflow-x: hidden; /* Esto oculta cualquier desbordamiento horizontal */
 }
 
 header {
@@ -152,6 +157,10 @@ footer {
 
 /* Media Queries para pantallas pequeñas (móviles y tablets pequeños) */
 @media (max-width: 768px) {
+  body {
+    padding: 0 10px;  /* Añadir un poco de margen en móviles para evitar el desbordamiento */
+  }
+
   .menu {
     padding: 10px;  /* Reduce el padding en móviles */
   }
@@ -186,6 +195,3 @@ footer {
   }
 }
 
-body {
-  overflow-x: hidden;  /* Esto evitará cualquier desbordamiento horizontal */
-}

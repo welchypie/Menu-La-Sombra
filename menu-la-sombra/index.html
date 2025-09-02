@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>La Sombra – Menú</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="logo la sombra.png" alt="Restaurante La Sombra" class="La sombra.png">
+    <p>Menú</p>
+  </header>
+
+  <section class="menu">
+   <!-- <div class="menu-buttons" style="margin-bottom: 20px;">
+  <button onclick="mostrarMenu('comida')" style="padding: 10px; margin-right: 10px;">Comida</button>
+  <button onclick="mostrarMenu('bebidas')" style="padding: 10px;">Bebidas</button>
+    </div>
+  -->
+
+
+<div id="menuComida">
+    <h2>Aperitivos</h2>
+    <p>Presione cada imagen para ver más información sobre el plato.</p>
+  <!-- sorullitos -->
+   <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Sorullitos de Maíz', 
+  'Sorullos.jpeg', 
+  '', 
+  '$0.00'
+)">
+  <img src="Sorullos.jpeg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+<div>
+  <h3>Sorullitos de Maíz (12)</h3>
+  <p>$</p>
+</div>
+</div>
+<!-- cordon bleu -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Cordon Bleu', 
+  'Cordon Bleu.jpeg', 
+  '', 
+  '$0.00'
+)">
+  <img src="Cordon Bleu.jpeg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Cordon Bleu (6)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- bolitas de queso -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Bolitas de Queso', 
+  'Bolitas de Queso.jpeg', 
+  '', 
+  '$0.00'
+)">
+  <img src="Bolitas de Queso.jpeg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Bolitas de Queso (6)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- mozzarella sticks -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mozzarella Sticks', 
+  'Mozzarella.jpeg', 
+  '', 
+  '$0.00'
+)">
+  <img src="Mozzarella.jpeg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mozzarella Sticks (6)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- canastitas de platano -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Canastitas Rellenas de Longaniza (3)', 
+  'Canastitas.jpg',
+  'Pollo, Cerdo o Mixta y Salsa a escoger: Ajillo o Criolla.',
+  '$0.00'
+)">
+  <img src="Canastitas.jpg" alt="Canastas Rellenas de Longaniza" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Canastas Rellenas de Longaniza (3)</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- canastitas de yuca -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Canastas de Yuca Rellenas de Spicy Crab', 
+  '.jpg', 
+  'Contiene Aceite de Sesamo(Ajonjoli)', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Canastas de Yuca Rellenas de Spicy Crab (3)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- chorizo al vino -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Chorizo al Vino', 
+  'Chorizo al vino.jpg', 
+  '.', 
+  '$0.00'
+)">
+  <img src="Chorizo al vino.jpg" alt="Chorizo al Vino" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Chorizo al Vino</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- queso frito -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Queso Frito', 
+  'Queso Frito.jpeg', 
+  '', 
+  '$0.00'
+)">
+  <img src="Queso Frito.jpeg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Queso Frito (8)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- nuggets veganos -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Nuggets Veganos', 
+  '.jpg', 
+  '', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Nuggets Veganos(6)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- sopa del dia -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Sopa del dia', 
+  '.jpg', 
+  '.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Sopa del Día</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- empanadas de maiz -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Empanadas de Maiz', 
+  '.jpg', 
+  'Rellena de Pollo o Cerdo.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Empanadas de Maíz (4)</h3>
+  <p>$</p>
+  </div>
+</div>
+
+    <h2>Longaniza Frita (1 lb)</h2>
+    <!-- cerdo -->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Longaniza de Cerdo', 
+  'longaniz de cerdo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="longaniz de cerdo.jpg" alt="Longaniza de Cerdo" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Cerdo</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pollo -->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Longaniza de Pollo', 
+  'longaniz de cerdo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="longaniz de cerdo.jpg" alt="Longaniza de Pollo" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Pollo</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pavochon -->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Longaniza de Pavochón', 
+  'longaniz de cerdo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="longaniz de cerdo.jpg" alt="Longaniza de Pavochón" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Pavochón</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- tripleta -->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Longaniza de Tripleta', 
+  'longaniz de cerdo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="longaniz de cerdo.jpg" alt="Longaniza de Tripleta" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Tripleta</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pescado -->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Longaniza de Pescado', 
+  'longaniz de cerdo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="longaniz de cerdo.jpg" alt="Longaniza de Tripleta" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Pescado</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- chorizo -->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Longaniza de Chorizo', 
+  'longaniz de cerdo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="longaniz de cerdo.jpg" alt="Longaniza Chorizo al Vino" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza Chorizo</h3>
+    <p>$</p>
+  </div>
+</div>
+<!--chorizo al vino-->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Chorizo al Vino', 
+  'Chorizo al vino.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Chorizo al vino.jpg" alt="Longaniza Chorizo al Vino" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Chorizo al Vino</h3>
+    <p>$</p>
+  </div>
+</div>
+    
+    <h2>Arroz</h2>
+    <!-- longaniza -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  '.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Arroz con Longaniza Cerdo</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- gandules -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  '.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Arroz con Gandules</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- habichuelas frescas -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  '.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Arroz con Habichuelas Frescas</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- blanco -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  '.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Arroz Blanco</h3>
+  <p>$</p>
+  </div>
+</div>
+
+     <h2> Almuerzos</h2>
+     <!-- cerdo -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  'Almuerzo.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Almuerzo.jpg" alt="Longaniza de Cerdo" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Cerdo</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pollo -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Almuerzo.jpg" alt="Longaniza de Pollo" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Pollo</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pavochon -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Almuerzo.jpg" alt="Longaniza de Pavochón" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Pavochón</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- tripleta -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Almuerzo.jpg" alt="Longaniza de Tripleta" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Tripleta</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pescado -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Almuerzo.jpg" alt="Longaniza de Pescado" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Pescado</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- chorizo -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src="Almuerzo.jpg" alt="Longaniza de Chorizo" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Longaniza de Chorizo</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- pechugas enpanadas -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Pechugas Empanadas</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pechugas -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Pechugas</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- carne ahumada -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Carne Ahumada</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- carne frita -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Carne Frita</h3>
+  <p>$</p>
+  </div>
+</div>
+
+    <h2>Mofongo Relleno</h2>
+    <!-- cerdo -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Cerdo', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno Longaniza de Cerdo</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pollo -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Pollo', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno Longaniza de Pollo</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pavochon -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Pavochón', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno Longaniza de Pavochón</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- tripleta -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Tripleta', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno Longaniza de Tripleta</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pescado -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Pescado', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno Longaniza de Pescado</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- camarones -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Camarones', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno de Camarones</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pechugas -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Pechuga', 
+  'Mofongo.jpg', 
+  'Salsa a Escoger: Ajillo, Criolla o Salsa Blanca(contiene nuez moscada).', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno de Pechuga</h3>
+  <p>$</p>
+  </div>
+</div>
+<!--carne frita-->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Carne Frita', 
+  'Mofongo.jpg', 
+  'Salsa al Ajillo.', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno de Carne Frita</h3>
+  <p>$</p>
+  </div>
+</div>
+<!--carne ahumada-->
+<div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Mofongo Relleno de Carne Ahumada', 
+  'Mofongo.jpg', 
+  'Salsa al Ajillo.', 
+  '$0.00'
+)">
+  <img src="Mofongo.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Mofongo Relleno de Carne Ahumada</h3>
+  <p>$</p>
+  </div>
+</div>
+
+    <h2>Al Plato</h2>
+    <!-- carne frita -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Carne Frita</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pechugas -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Pechugas</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- camarones -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Camarones</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- salmon -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  '', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Salmón</h3>
+  <p>$</p>
+  </div>
+</div>
+
+    <h2>Platos para Compartir</h2>
+    <!-- Doña Maria -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Doña María', 
+  'Doña María.jpg', 
+  'Comen de 3-4 personas. Incluye Arroz con Longaniza y Habichuelas Guisadas  (o arroz a escoger), 1 lb. Longaniza Frita de Pollo, Cerdo o Mixta con Tostones o Yuca Frita..', 
+  '$0.00'
+)">
+    <img src="Doña María.jpg" alt="Doña María" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Doña María (3-4 personas)</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- Don Jorge -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Don Jorge', 
+  'Don Jorge.jpg', 
+  'Comen de 6-8 personas.  Incluye 1/2 lb.Longaniza Cerdo, 1/2 lb. Pollo, 1/2 lb. Pavochón, 1/2 lb. Tripleta y Chorizo al Vino con Tostones o Yuca Frita.', 
+  '$0.00'
+)">
+  <img src="Don Jorge.jpg" alt="Don Jorge" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Don Jorge(6-8 personas)</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- Don Peyo -->
+     <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Don Peyo', 
+  'Don Peyo.jpg', 
+  'Comen de 6-8 personas.  Incluye 1 lb. Longaniza de Pollo, 1 lb. Longaniza de Cerdo, Cordon Bleu(6), Sorullitos de Maíz(12), Mozzarella Sticks(6), Queso Frito(8), Tostones y Yuca Frita.', 
+  '$0.00'
+)">
+  <img src="Don Peyo.jpg" alt="Don Peyo" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Don Peyo(6-8 personas)</h3>
+    <p>$</p>
+  </div>
+  </div>
+
+    <h2>Menú de niños</h2>
+    <!-- Cordon bleu -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Menú de Niños de Cordon bleu', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Cordon Bleu (4)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- pechugas empanadas -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Menú de Niños de Pechuguitas Empanadas', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Pechuguitas Empanadas</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- nuggets veganos -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Menú de Niños de Nuggets Veganos', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Nuggets Veganos(6)</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- longaniza -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Menú de Niños de Longaniza', 
+  '.jpg', 
+  'Complemento a escoger: Tostones,Tostones de Pana, Yuca, Papas Fritas, Batata Frita, Amarillos, Mofongo, Ensalada Verde, Ensalada de Coditos.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>1/4 Longaniza de Cerdo o Pollo</h3>
+  <p>$</p>
+  </div>
+</div>
+
+    <h2>Postres</h2>
+    <!-- flanes -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Flanes', 
+  '.jpg', 
+  'Vainilla, Queso, Nutella, Coco.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Flan</h3>
+  <p>(Vainilla, Queso, Nutella, Coco)</p>
+  <p>$</p>
+  </div>
+</div>
+<!-- tembleque -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;" class="item" onclick="mostrarModal(
+  'Tembleque', 
+  'Tembleque.jpg', 
+  '', 
+  '$0.00'
+)">
+  <img src="Tembleque.jpg" alt="Tembleque" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Tembleque</h3>
+    <p>$</p>
+  </div>
+</div>
+<!-- arroz con dulce -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Arroz con Dulce', 
+  '.jpg', 
+  '', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Arroz con Dulce</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- lechoza con queso -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Lechoza con Queso', 
+  '.jpg', 
+  '', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Lechosa con Queso</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- Tres leche -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Tres Leche', 
+  '.jpg', 
+  '', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Tres Leche</h3>
+  <p>(Regular, Coco)</p>
+  <p>$</p>
+  </div>
+</div>
+<!-- empanadillas de nutella -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Empanadillas de Nutella', 
+  '.jpg', 
+  '', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Empanadillas Rellenas de Nutella</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- helado -->
+  <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Helado', 
+  '.jpg', 
+  'Chocolate, Vainilla o Mixto.', 
+  '$0.00'
+)">
+  <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+  <h3>Helado</h3>
+  <p>$</p>
+  </div>
+</div>
+<!-- hojaldres -->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Hojaldre Relleno', 
+  'hojaldres.jpg', 
+  'Piña y Queso, Queso y Guayaba, Queso y Almendras, Manzana y Queso.', 
+  '$0.00'
+)">
+  <img src="hojaldres.jpg" alt="Hojaldre Relleno" style="width: 130px; height: auto; border-radius: 40px;">
+  <div>
+    <h3>Hojaldre Relleno</h3>
+    <p>$</p>
+  </div>
+</div>
+    
+
+    
+     <h2>Crudas (Lb) </h2>
+    <!--cerdo-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza de Cerdo</h3>
+    <p>$</p>
+    </div>
+  </div>
+<!--pollo-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza de Pollo</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--pavochon-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza de Pavochón</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--tripleta-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza de Tripleta</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--pescado-->
+   <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza de Pescado</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--chorizo-->
+   <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza de Chorizo</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--longa ahumada-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Cruda.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Longaniza Ahumada</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--carne ahumada-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src=".jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Carne Ahumada</h3>
+    <p>$</p>
+    </div>
+  </div>
+  <!--hamburger-->
+    <div class="item" style="display: flex; align-items: center; gap: 10px;">
+    <img src="Hamburger.jpg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+    <div>
+    <h3>Hamburger de Cerdo o Pollo</h3>
+    <p>$</p>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!--
+  <div id="menuBebidas" style="display: none;">
+  <h2>Bebidas</h2>
+  <div class="item"><h3>Agua</h3><p>$</p></div>
+  <div class="item"><h3>Refrescos</h3><p>$</p></div>
+  <div class="item"><h3>Jugos </h3><p>$</p></div>
+  <div class="item"><h3>Café</h3><p>$</p></div>
+  <div class="item"><h3>Frappes</h3><p>$</p></div>
+  <h2>Coctelería</h2>
+  <div class="item"><h3>Margaritas</h3><p>$</p></div>
+  <div class="item"><h3>Mojitos</h3><p>$</p></div>
+  <div class="item"><h3>Orgasmo</h3><p>$</p></div>
+</div>
+-->
+  </section>
+  <footer>
+    <p>&copy; 2025 Restaurante La Sombra</p>
+    <p>Advertencia: Alimentos crudos o parcialmente cocidos pueden traer efectos adversos a la salud.</p>
+    <div class="social-media" style="margin-top: 10px;">
+  <a href="https://www.instagram.com/restaurante_lasombra" target="_blank" style="margin-right: 10px; color: inherit;"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/lasombraorocovis" target="_blank" style="margin-right: 10px; color: inherit;"><i class="fab fa-facebook-f"></i></a>
+  
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Modal -->
+<div id="modalPlato" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <h2 id="modalTitulo"></h2>
+    <img id="modalImagen" src="" alt="Imagen del plato">
+    <p id="modalDescripcion"></p>
+    <p><strong>Precio: </strong><span id="modalPrecio"></span></p>
+  </div>
+</div>
+
+
+</body>
+</html>

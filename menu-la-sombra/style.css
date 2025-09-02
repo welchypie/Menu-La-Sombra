@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #500000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.menu {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.menu h2 {
+  border-bottom: 2px solid #aaa;
+  margin-top: 30px;
+}
+
+.item {
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.item h3 {
+  margin: 0;
+  color: #500000;
+}
+
+footer {
+  text-align: center;
+  background-color: #500000;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.menu-buttons button {
+  background-color: #8B0000; /* vino oscuro */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu-buttons button:hover {
+  background-color: #a51414;
+  transform: scale(1.05);
+}
+
+.menu-buttons button:active {
+  transform: scale(0.95);
+}
+
+.item {
+  cursor: pointer;             /* manita en desktop */
+  transition: all 0.3s ease;   /* animación suave */
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.item:hover {
+  background-color: rgba(0,0,0,0.1); /* resalta */
+  transform: scale(1.02);            /* leve zoom */
+}
+
+.item:active {
+  background-color: rgba(0,0,0,0.2); /* al presionar en móvil */
+  transform: scale(0.98);
+}
+
+
+
+
+
+/* Fondo del modal */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6); 
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fffaf0;
+  margin: 10% auto;  /* centra vertical y horizontal */
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  /* Animación */
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Imagen dentro del modal */
+.modal-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Botón cerrar */
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

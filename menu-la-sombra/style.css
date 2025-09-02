@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   background-color: #fffaf0;
@@ -14,9 +15,10 @@ header {
 }
 
 .menu {
-  max-width: 900px;
-  margin: auto;
+  width: 100%;
+  max-width: 100%;
   padding: 20px;
+  margin: auto;
 }
 
 .menu h2 {
@@ -41,6 +43,7 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
+
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -86,10 +89,6 @@ footer {
   transform: scale(0.98);
 }
 
-
-
-
-
 /* Fondo del modal */
 .modal {
   display: none; 
@@ -113,14 +112,13 @@ footer {
   max-width: 500px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-
-  /* Animación */
   animation: fadeInUp 0.4s ease-out;
 }
 
 /* Imagen dentro del modal */
 .modal-content img {
   width: 100%;
+  height: auto;
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
@@ -150,4 +148,44 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Media Queries para pantallas pequeñas (móviles y tablets pequeños) */
+@media (max-width: 768px) {
+  .menu {
+    padding: 10px;  /* Reduce el padding en móviles */
+  }
+
+  .menu-buttons {
+    flex-direction: column;  /* Cambia el layout de los botones a columna */
+    gap: 10px;
+  }
+
+  .menu-buttons button {
+    width: 100%;  /* Los botones ocupan todo el ancho disponible */
+    font-size: 14px;  /* Reducir el tamaño del texto */
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 90%;  /* Modal más pequeño en pantallas pequeñas */
+  }
+
+  .item {
+    font-size: 14px;  /* Reduce el tamaño de fuente para los items */
+    padding: 8px;  /* Ajuste de padding */
+  }
+
+  .item:hover {
+    transform: scale(1);  /* Reduce el zoom para mejorar la usabilidad */
+  }
+
+  footer {
+    font-size: 14px;  /* Reduce el tamaño de texto en el pie de página */
+    padding: 10px;
+  }
+}
+
+body {
+  overflow-x: hidden;  /* Esto evitará cualquier desbordamiento horizontal */
 }

@@ -19,6 +19,15 @@ header {
   padding: 20px;
 }
 
+/* Ajustes para el logo */
+header img {
+  width: 100%; /* Hace que el logo ocupe el 100% del ancho del header */
+  height: auto; /* Mantiene la proporción del logo */
+  max-width: 300px; /* Limita el tamaño máximo del logo */
+  margin: 0 auto; /* Centra el logo */
+  display: block; /* Asegura que el logo sea un bloque y se centre */
+}
+
 .menu {
   width: 100%;
   max-width: 100%;
@@ -159,6 +168,14 @@ footer {
 @media (max-width: 768px) {
   body {
     padding: 0 10px;  /* Añadir un poco de margen en móviles para evitar el desbordamiento */
+  }
+
+  header {
+    padding: 10px;  /* Reduce el padding en pantallas pequeñas */
+  }
+
+  header img {
+    max-width: 70%; /* Ajusta el tamaño del logo en pantallas pequeñas */
   }
 
   .menu {

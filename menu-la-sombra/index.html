@@ -1007,32 +1007,29 @@
   </div>
 </div>
 
- <script>
-  const currentPage = window.location.pathname.split("/").pop();
-  const container = document.getElementById("selectorIdioma");
-  const link = document.createElement("a");
-  const img = document.createElement("img");
-  img.style.width = "30px";
-  img.style.height = "auto";
-  img.style.borderRadius = "50%";
-  img.style.border = "none";
+<script>
+  // Detecta el idioma actual de la página
+  const currentLang = document.documentElement.lang || 'es'; // 'es' por defecto
 
-  if (currentPage === "index.html") {
-    link.href = "index-en.html";
-    img.src = "bandera-en.png";
-    img.alt = "English";
-  } else if (currentPage === "index-en.html") {
-    link.href = "index.html";
-    img.src = "bandera-es.png";
-    img.alt = "Español";
+  const langLink = document.getElementById('lang-link');
+  const langFlag = document.getElementById('lang-flag');
+
+  if (currentLang === 'es') {
+    // Página en español, mostrar bandera de inglés
+    langLink.href = 'pagina-en-ingles.html';
+    langFlag.src = 'bandera-en.png';
+    langFlag.alt = 'English';
+  } else {
+    // Página en inglés, mostrar bandera de español
+    langLink.href = 'pagina-en-espanol.html';
+    langFlag.src = 'bandera-es.png';
+    langFlag.alt = 'Español';
   }
-
-  link.appendChild(img);
-  container.appendChild(link);
 </script>
 
 </body>
 </html>
+
 
 
 

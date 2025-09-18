@@ -14,22 +14,11 @@
 </head>
 <body>
   <header style="position: relative;">
-   <img src="logo la sombra.png" alt="Restaurante La Sombra" class="La sombra.png">
-   <p>Menu</p>
+    <img src="logo la sombra.png" alt="Restaurante La Sombra" class="La sombra.png">
+  <p>Menu</p>
 
-   <!-- Enlaces de idioma en la esquina superior derecha -->
-   <div style="position: absolute; top: 10px; right: 10px; font-size: 1rem;">
-    <!-- Selector de idioma con banderas -->
-<div style="position: absolute; top: 10px; right: 10px; z-index: 10; display: flex; gap: 5px;">
-  <a href="index.html">
-    <img src="bandera-es.png" alt="Español" style="width: 24px; height: auto; border-radius: 3px; border: 1px solid #ccc;">
-  </a>
-  <a href="index-en.html">
-    <img src="bandera-en.png" alt="English" style="width: 24px; height: auto; border-radius: 3px; border: 1px solid #ccc;">
-  </a>
-</div>
-
-   </div>
+  <!-- Selector de idioma con banderas -->
+  <div id="selectorIdioma" style="position: absolute; top: 10px; right: 10px; z-index: 10;"></div>
 </header>
 
   <section class="menu">
@@ -1018,9 +1007,33 @@
   </div>
 </div>
 
+ <script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const container = document.getElementById("selectorIdioma");
+  const link = document.createElement("a");
+  const img = document.createElement("img");
+  img.style.width = "30px";
+  img.style.height = "auto";
+  img.style.borderRadius = "50%";
+  img.style.border = "none";
+
+  if (currentPage === "index.html") {
+    link.href = "index-en.html";
+    img.src = "bandera-en.png";
+    img.alt = "English";
+  } else if (currentPage === "index-en.html") {
+    link.href = "index.html";
+    img.src = "bandera-es.png";
+    img.alt = "Español";
+  }
+
+  link.appendChild(img);
+  container.appendChild(link);
+</script>
 
 </body>
 </html>
+
 
 
 

@@ -13,11 +13,13 @@ body {
 }
 
 header {
-  background-color: #500000; /* Color de fondo del header */
+  background-color: #500000;
   color: white;
   text-align: center;
   padding: 20px;
+  position: relative;
 }
+
 
 /* Ajustes para el logo */
 header img {
@@ -211,4 +213,5 @@ footer {
     padding: 10px;
   }
 }
+
 

@@ -14,19 +14,17 @@
 </head>
 <body>
   <header style="position: relative;">
-   <img src="logo la sombra.png" alt="Restaurante La Sombra" class="La sombra.png">
+  <img src="logo la sombra.png" alt="Restaurante La Sombra" class="logo">
   <p>Menu</p>
 
- <!-- Selector de idioma con banderas -->
-<div style="position: absolute; top: 10px; right: 10px; z-index: 10; display: flex; gap: 5px;">
-  <a href="index.html">
-    <img src="bandera-es.png" alt="Español" style="width: 50px; height: auto; border-radius: 3px; border: 1px solid #ccc;">
-  </a>
-  <a href="index-en.html">
-    <img src="bandera-en.png" alt="English" style="width: 50px; height: auto; border-radius: 3px; border: 1px solid #ccc;">
-  </a>
-</div>
+  <!-- Selector de idioma con bandera opuesta -->
+  <div id="language-switcher" style="position: absolute; top: 10px; right: 10px; z-index: 10;">
+    <a id="lang-link" href="#">
+      <img id="lang-flag" src="" alt="Switch Language" style="width: 50px; height: auto; border-radius: 3px; border: 1px solid #ccc;">
+    </a>
+  </div>
 </header>
+
 
   <section class="menu">
    <!-- <div class="menu-buttons" style="margin-bottom: 20px;">
@@ -1052,10 +1050,28 @@
   </div>
 </div>
 
+ <script>
+  const currentLang = document.documentElement.lang || 'es'; // Detecta idioma actual
+  const langLink = document.getElementById('lang-link');
+  const langFlag = document.getElementById('lang-flag');
+
+  if (currentLang === 'es') {
+    // Página en español → mostrar bandera de inglés
+    langLink.href = 'index-en.html';
+    langFlag.src = 'bandera-en.png';
+    langFlag.alt = 'English';
+  } else {
+    // Página en inglés → mostrar bandera de español
+    langLink.href = 'index.html';
+    langFlag.src = 'bandera-es.png';
+    langFlag.alt = 'Español';
+  }
+</script>
 
 </body>
 
 </html>
+
 
 
 

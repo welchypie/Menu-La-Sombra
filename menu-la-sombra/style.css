@@ -20,21 +20,6 @@ header {
   position: relative; /* Muy importante */
 }
 
-.language-switcher {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.language-switcher .flag {
-  width: 40px;
-  height: auto;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
 /* Ajustes para el logo */
 header img {
   width: 100%; /* Hace que el logo ocupe el 100% del ancho del header */
@@ -227,6 +212,7 @@ footer {
     padding: 10px;
   }
 }
+
 
 
 

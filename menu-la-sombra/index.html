@@ -1018,12 +1018,12 @@
 
   if (currentLang === 'es') {
     // Página en español → mostrar bandera de inglés
-    langLink.href = 'index-en.html';
+    langLink.href = '/en'; // ✅ USAR RUTA LIMPIA
     langFlag.src = 'bandera-en.png';
     langFlag.alt = 'English';
   } else {
     // Página en inglés → mostrar bandera de español
-    langLink.href = 'index.html';
+    langLink.href = '/'; // ✅ USAR RUTA LIMPIA
     langFlag.src = 'bandera-es.png';
     langFlag.alt = 'Español';
   }
@@ -1031,6 +1031,7 @@
  
 </body>
 </html>
+
 
 
 

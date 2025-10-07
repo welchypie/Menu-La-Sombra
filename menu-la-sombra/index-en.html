@@ -1049,19 +1049,19 @@
   </div>
 </div>
 
- <script>
+ script>
   const currentLang = document.documentElement.lang || 'es'; // Detecta idioma actual
   const langLink = document.getElementById('lang-link');
   const langFlag = document.getElementById('lang-flag');
 
   if (currentLang === 'es') {
-    // Página en español → mostrar bandera de inglés
-    langLink.href = 'index-en.html';
+    // Página en español
+    langLink.href = '/en'; 
     langFlag.src = 'bandera-en.png';
     langFlag.alt = 'English';
   } else {
-    // Página en inglés → mostrar bandera de español
-    langLink.href = 'index.html';
+    // Página en inglés 
+    langLink.href = '/';
     langFlag.src = 'bandera-es.png';
     langFlag.alt = 'Español';
   }
@@ -1070,6 +1070,7 @@
 </body>
 
 </html>
+
 
 
 

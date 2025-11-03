@@ -1031,42 +1031,44 @@
   }
 </script>
  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<!-- Tabletop.js para leer Google Sheets -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+
 <script>
-const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMTzxE_8tFu0OiyUfXhZIGZ7e2kVZ0KCIp8MYAQZDoyV5lTvuYWaKXgORcc4Ke3asaL-h2dXMJN9S5/pub?output=csv';
+const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMTzxE_8tFu0OiyUfXhZIGZ7e2kVZ0KCIp8MYAQZDoyV5lTvuYWaKXgORcc4Ke3asaL-h2dXMJN9S5/pubhtml';
 
-Papa.parse(sheetURL, {
-  download: true,
-  header: true,
-  complete: function(results) {
-    const data = results.data;
+function updateMenuFromSheet(data) {
+  data.forEach(item => {
+    const nombrePlato = item.plato.trim();
+    const precio = item.precio.trim();
 
-    data.forEach(item => {
-      const nombrePlato = item.plato.trim();
-      const precio = item.precio.trim();
-
-      // Busca todos los h3 dentro de .item
-      document.querySelectorAll('.item h3').forEach(h3 => {
-        if(h3.textContent.includes(nombrePlato)) {
-          // Busca el <p> dentro del mismo contenedor del h3
-          const precioTag = h3.parentElement.querySelector('p');
-          if(precioTag) precioTag.textContent = `$${precio}`;
-        }
-      });
+    document.querySelectorAll('.item h3').forEach(h3 => {
+      if(h3.textContent.includes(nombrePlato)) {
+        const precioTag = h3.parentElement.querySelector('p');
+        if(precioTag) precioTag.textContent = `$${precio}`;
+      }
     });
+  });
 
-    console.log('✅ Precios actualizados desde Google Sheet');
-  },
-  error: function(err) {
-    console.error('❌ Error al leer el CSV:', err);
-  }
+  console.log('✅ Precios actualizados desde Google Sheet');
+}
+
+// Inicializa Tabletop
+window.addEventListener('DOMContentLoaded', () => {
+  Tabletop.init({
+    key: publicSpreadsheetUrl,
+    simpleSheet: true,
+    callback: updateMenuFromSheet
+  });
 });
 </script>
 
 
 
+
 </body>
 </html>
+
 
 
 

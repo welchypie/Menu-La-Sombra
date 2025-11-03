@@ -1031,9 +1031,7 @@
   }
 </script>
  
- <!-- Librería para leer CSV -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-
 <script>
 const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMTzxE_8tFu0OiyUfXhZIGZ7e2kVZ0KCIp8MYAQZDoyV5lTvuYWaKXgORcc4Ke3asaL-h2dXMJN9S5/pub?output=csv';
 
@@ -1048,9 +1046,8 @@ Papa.parse(sheetURL, {
       const precio = item.precio.trim();
 
       document.querySelectorAll('.item h3').forEach(h3 => {
-        // Ajusta la coincidencia para que encuentre el plato aunque tenga extras en el HTML
         if(h3.textContent.includes(nombrePlato)) {
-          const p = h3.nextElementSibling; // <p> con el precio
+          const p = h3.nextElementSibling;
           if(p) p.textContent = `$${precio}`;
         }
       });
@@ -1064,8 +1061,10 @@ Papa.parse(sheetURL, {
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 

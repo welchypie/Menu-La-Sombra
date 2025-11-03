@@ -1035,35 +1035,35 @@
 <script>
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMTzxE_8tFu0OiyUfXhZIGZ7e2kVZ0KCIp8MYAQZDoyV5lTvuYWaKXgORcc4Ke3asaL-h2dXMJN9S5/pubhtml';
 
-function updateMenuFromSheet(data) {
+function updatePricesFromSheet(data) {
   data.forEach(item => {
     const nombrePlato = item.plato.trim();
     const precio = item.precio.trim();
 
+    // Busca el <h3> que contiene el nombre del plato y cambia su <p> de precio
     document.querySelectorAll('.item h3').forEach(h3 => {
-      if(h3.textContent.includes(nombrePlato)) {
+      if (h3.textContent.includes(nombrePlato)) {
         const precioTag = h3.parentElement.querySelector('p');
-        if(precioTag) precioTag.textContent = `$${precio}`;
+        if (precioTag) precioTag.textContent = `$${precio}`;
       }
     });
   });
   console.log('✅ Precios actualizados desde Google Sheet');
 }
 
+// Inicializa Tabletop.js al cargar la página
 window.addEventListener('DOMContentLoaded', () => {
   Tabletop.init({
     key: publicSpreadsheetUrl,
     simpleSheet: true,
-    callback: updateMenuFromSheet
+    callback: updatePricesFromSheet
   });
 });
 </script>
 
-
-
-
 </body>
 </html>
+
 
 
 

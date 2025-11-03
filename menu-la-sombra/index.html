@@ -37,13 +37,18 @@
     <h2>Aperitivos</h2>
     <p>*Presione cada imagen para ver más información sobre el plato.</p>
   <!-- sorullitos -->
-   <div class="item" onclick="mostrarModal('Sorullitos de Maíz', 'Sorullos.jpeg', '', '$6.00')">
-    <img src="Sorullos.jpeg" alt="" style="width: 130px; border-radius: 40px;">
-    <div>
-      <h3>Sorullitos de Maíz (12)</h3>
-      <p>$6.00</p>
-    </div>
-  </div>
+   <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
+  'Sorullitos de Maíz', 
+  'Sorullos.jpeg', 
+  '', 
+  '$6.00'
+)">
+  <img src="Sorullos.jpeg" alt="" style="width: 130px; height: auto; border-radius: 40px;">
+<div>
+  <h3>Sorullitos de Maíz (12)</h3>
+  <p>$6.00</p>
+</div>
+</div>
 <!-- cordon bleu -->
     <div class="item" style="display: flex; align-items: center; gap: 10px;"class="item" onclick="mostrarModal(
   'Cordon Bleu', 
@@ -1059,6 +1064,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
 
 
 

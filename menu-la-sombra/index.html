@@ -1045,10 +1045,12 @@ Papa.parse(sheetURL, {
       const nombrePlato = item.plato.trim();
       const precio = item.precio.trim();
 
+      // Busca todos los h3 dentro de .item
       document.querySelectorAll('.item h3').forEach(h3 => {
         if(h3.textContent.includes(nombrePlato)) {
-          const p = h3.nextElementSibling;
-          if(p) p.textContent = `$${precio}`;
+          // Busca el <p> dentro del mismo contenedor del h3
+          const precioTag = h3.parentElement.querySelector('p');
+          if(precioTag) precioTag.textContent = `$${precio}`;
         }
       });
     });
@@ -1062,8 +1064,10 @@ Papa.parse(sheetURL, {
 </script>
 
 
+
 </body>
 </html>
+
 
 
 

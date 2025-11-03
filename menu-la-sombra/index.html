@@ -1026,9 +1026,7 @@
   }
 </script>
  
-<!-- Tabletop.js para leer Google Sheets -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
-
 <script>
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMTzxE_8tFu0OiyUfXhZIGZ7e2kVZ0KCIp8MYAQZDoyV5lTvuYWaKXgORcc4Ke3asaL-h2dXMJN9S5/pubhtml';
 
@@ -1044,11 +1042,9 @@ function updateMenuFromSheet(data) {
       }
     });
   });
-
   console.log('✅ Precios actualizados desde Google Sheet');
 }
 
-// Inicializa Tabletop
 window.addEventListener('DOMContentLoaded', () => {
   Tabletop.init({
     key: publicSpreadsheetUrl,
@@ -1063,6 +1059,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
+
 
 
 

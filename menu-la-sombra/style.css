@@ -29,6 +29,14 @@ header img {
   display: block; /* Asegura que el logo sea un bloque y se centre */
 }
 
+.horario {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .menu {
   width: 100%;
   max-width: 100%;
@@ -212,6 +220,7 @@ footer {
     padding: 10px;
   }
 }
+
 
 
 

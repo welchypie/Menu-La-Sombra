@@ -21,6 +21,150 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+ <!-- POPUP HORARIO ESPECIAL SEMANA SANTA - LA SOMBRA -->
+<div id="horarioPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" id="cerrarPopup">✕</span>
+    
+    <h2>HORARIO ESPECIAL<br>SEMANA SANTA</h2>
+    
+    <div class="horario-especial">
+      <p><strong>Lunes 30 marzo 2026</strong><br>10:00am a 4:00pm</p>
+      <p><strong>Martes 31 marzo 2026</strong><br>10:00am a 4:00pm</p>
+      <p><strong>Miércoles 1 abril 2026</strong><br>10:00am a 4:00pm</p>
+      <p><strong>Jueves 2 abril 2026</strong><br>10:00am a 4:00pm</p>
+      <p class="cerrado"><strong>Viernes 3 abril 2026</strong><br><span class="santo">Viernes Santo</span><br><strong>Cerrado</strong></p>
+    </div>
+
+    <div class="telefono">
+      <strong>787-333-6263</strong>
+    </div>
+
+    <p class="mensaje">¡Te esperamos con sabor a Puerto Rico! 🍽️🇵🇷</p>
+    
+    <button id="btnCerrar" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+<style>
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fdf6e9;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 92%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  position: relative;
+  border: 5px solid #d32f2f;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 34px;
+  cursor: pointer;
+  color: #777;
+}
+
+.close-btn:hover { color: #c62828; }
+
+h2 {
+  color: #c62828;
+  font-size: 1.65rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.horario-especial p {
+  font-size: 1.12rem;
+  margin: 16px 0;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+  color: #333;
+}
+
+.cerrado {
+  background: #ffebee;
+  border-radius: 8px;
+  padding: 12px !important;
+  margin: 18px 0 !important;
+  border: 2px solid #c62828;
+}
+
+.santo {
+  font-size: 1.05rem;
+  color: #c62828;
+  font-weight: bold;
+}
+
+.telefono {
+  font-size: 1.35rem;
+  color: #c62828;
+  margin: 20px 0 10px;
+  font-weight: bold;
+}
+
+.mensaje {
+  font-style: italic;
+  color: #555;
+  margin: 15px 0;
+}
+
+.btn-cerrar {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-cerrar:hover {
+  background: #c0392b;
+}
+</style>
+
+<script>
+// Mostrar automáticamente al entrar a la página
+window.onload = function() {
+  setTimeout(() => {
+    document.getElementById('horarioPopup').style.display = 'flex';
+  }, 900); // aparece después de casi 1 segundo
+};
+
+// Cerrar el popup
+document.getElementById('cerrarPopup').onclick = function() {
+  document.getElementById('horarioPopup').style.display = 'none';
+};
+
+document.getElementById('btnCerrar').onclick = function() {
+  document.getElementById('horarioPopup').style.display = 'none';
+};
+
+// Cerrar si se hace clic fuera del contenido
+document.getElementById('horarioPopup').onclick = function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+  }
+};
+</script>
+ <!--termina pop up-->
 <body>
   <header style="position: relative;">
   <img src="logo la sombra.png" alt="Restaurante La Sombra" class="logo">

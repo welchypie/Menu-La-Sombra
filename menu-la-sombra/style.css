@@ -158,7 +158,7 @@ footer {
 .modal-content img {
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 280px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
